@@ -13,12 +13,14 @@ An action to automatically fetch Google Scholar records.
 The record string in JSON format. This output only exists when the `record-file` input is not given.
 
 ## Example usage
-Create two new __repository variables__ in https://github.com/USERNAME/REPOSITORY/settings/variables/actions as follows:
+Create new __repository variables__ in https://github.com/USERNAME/REPOSITORY/settings/variables/actions as follows:
 
 | Name | Description | Example |
 |:-:|:-:|:-:|
 | GOOGLE_SCHOLAR_ID | Your Google Scholar id. | XXXXXXXXXXXX (In your personal scholar page address, the value of `user` key.) |
 | RECORD_FILE | The related path of the works file in your repository. | assets/record.json |
+| GIT_USERNAME (Optional) | The git username in your action to update file. | - |
+| GIT_EMAIL (Optional) | The git e-mail in your action to update file. | - |
 
 Now you can create an action to auto update your Google Scholar record.
 
