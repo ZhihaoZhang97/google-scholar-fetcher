@@ -25,6 +25,9 @@ async function fetchRange(start, end) {
                 case 'Journal':
                     detailedRecordJson['journal'] = detailedRecordInfoItem.childNodes[1].innerHTML;
                     break;
+                case 'Conference':
+                    detailedRecordJson['journal'] = detailedRecordInfoItem.childNodes[1].innerHTML;
+                    break;
                 case 'Volume':
                     detailedRecordJson['volume'] = detailedRecordInfoItem.childNodes[1].innerHTML;
                     break;
