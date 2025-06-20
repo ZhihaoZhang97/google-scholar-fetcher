@@ -1,91 +1,84 @@
-# Google Sholar Fetcher
-An action to automatically fetch Google Scholar records.
+# Google Scholar Fetcher (Python)
 
-## Inputs
-### `google-scholar-id`
-**Required** The Google Scholar ID of researcher.
+A GitHub Action to automatically fetch your Google Scholar publications and save them as JSON.
 
-### `record-file`
-**Optional** The record json file to write. If this input was given, the output `record` will not be generated.
+## Overview
 
-## Outputs
-### `record`
-The record string in JSON format. This output only exists when the `record-file` input is not given.
+This action uses the SerpAPI service to fetch Google Scholar publications for a specified author and saves them to a JSON file in your repository. The action is scheduled to run monthly, and it will automatically commit and push any changes to the repository.
 
-## Example usage
-Create new __repository variables__ in https://github.com/USERNAME/REPOSITORY/settings/variables/actions as follows:
+## Setup Instructions
 
-| Name | Description | Example |
-|:-:|:-:|:-:|
-| GOOGLE_SCHOLAR_ID | Your Google Scholar id. | XXXXXXXXXXXX (In your personal scholar page address, the value of `user` key.) |
-| RECORD_FILE | The related path of the works file in your repository. | assets/record.json |
-| GIT_USERNAME (Optional) | The git username in your action to update file. | - |
-| GIT_EMAIL (Optional) | The git e-mail in your action to update file. | - |
+### 1. Set up GitHub Repository Variables
 
-Now you can create an action to auto update your Google Scholar record.
+Go to your repository's Settings → Secrets and variables → Actions, and set up:
 
-The workflow's code is as follows:
-```yaml
-name: Update Record
+**Variables (Variables tab):**
+- `GOOGLE_SCHOLAR_ID`: Your Google Scholar ID (found in your profile URL)
+- `GIT_USERNAME` (optional): Name to use for commits (defaults to "GitHub Action")
+- `GIT_EMAIL` (optional): Email to use for commits (defaults to "action@github.com")
 
-on:
-  # Create a scheduled task, in this example we run it at the first day of every month.
-  schedule:
-    - cron: "0 0 1 * *"
-  # Enable manually executing.
-  workflow_dispatch:
+**Secret (Secrets tab):**
+- `SERPAPI_KEY`: Your SerpAPI API key (recommended to use a secret)
 
-permissions:
-  contents: write
-  
-jobs:
-  build:
-    runs-on: ubuntu-latest
+### 2. Get a SerpAPI Key
 
-    steps:
-    - uses: actions/checkout@v4
-    
-    # Fetch record with Google Scholar ID
-    - name: Get record with token
-      uses: sxlllslgh/google-scholar-fetcher@v1
-      id: record
-      with:
-        google-scholar-id: ${{ vars.GOOGLE_SCHOLAR_ID }}
-        record-file: ${{ vars.RECORD_FILE }}
-      
-    - name: Make sure the record file is tracked
-      run: git add ${{ vars.RECORD_FILE }}
+1. Sign up for an account at [SerpApi](https://serpapi.com/)
+2. Get your API key from your dashboard
+3. Add it as a secret in your GitHub repository
 
-    # If record file changed, return exit code 1, otherwise 0.
-    - name: Judge if file changed
-      id: changed
-      continue-on-error: true
-      run: git diff --exit-code ${{ vars.RECORD_FILE }}
+### 3. Workflow Configuration
 
-    - name: Judge if staged file changed
-      id: cached
-      continue-on-error: true
-      run: git diff --exit-code --cached ${{ vars.RECORD_FILE }}
+The GitHub workflow is configured to run:
+- Automatically on the 1st day of each month at midnight
+- Manually whenever you trigger it from the Actions tab
 
-    - name: Update record
-      if: ${{ steps.changed.outcome == 'failure' || steps.cached.outcome == 'failure' }}
-      run: |
-          git config --global user.name '${{ vars.GIT_USERNAME }}'
-          git config --global user.email '${{ vars.GIT_EMAIL }}'
-          git commit -am "Automatically update record."
-          git push
+## JSON Data Format
+
+The script saves publications in the following format:
+
+```json
+[
+  {
+    "title": "Publication Title",
+    "date": 2023,
+    "link": "https://doi.org/...",
+    "authors": ["Author 1", "Author 2"],
+    "journal": "Journal Name",
+    "volume": "Vol. X",
+    "pages": "XX-XX",
+    "publisher": "Publisher Name",
+    "description": "Abstract of the publication",
+    "citations": 10
+  }
+]
 ```
 
-The result is a string (or a file) in JSON format, the description is as follows:
-| Name | Description | Type |
-|:-:|:-|:-:|
-| title | Title of the publication. | String |
-| date | Date array of the publication in YYYY-MM-DD order, the array might be incompleted. | Array\<Int> |
-| link | Link of the publication. | String |
-| authors | Array of authors by the publication order. | Array\<String> |
-| journal | Journal/Conference title of the publication. | String |
-| volume | Volume of the publication. | String |
-| pages | Pages of the publication. | String |
-| publisher | Publisher of the publication. | String |
-| description | Description of the publication. Generally it is the abstract of a paper, and incompleted. | String |
-| citations | Count of citations of the publication. | Int |
+## Local Development
+
+To run the script locally:
+
+1. Install the required packages:
+   ```bash
+   pip install google-search-results
+   ```
+
+2. Update the `scraper.py` file with your Google Scholar ID and SerpAPI key
+3. Run the script:
+   ```bash
+   python scraper.py
+   ```
+
+## Using in a Website
+
+This JSON file can be used in a website by:
+
+1. Fetching the JSON file in your JavaScript:
+   ```javascript
+   fetch('/data/scholar.json')
+     .then(response => response.json())
+     .then(data => {
+       // Process the publications
+     });
+   ```
+
+2. The file will be automatically updated with your latest publications monthly 

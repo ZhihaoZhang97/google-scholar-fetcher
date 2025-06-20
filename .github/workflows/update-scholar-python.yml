@@ -1,0 +1,63 @@
+name: Update Google Scholar Records (Python)
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"  # Runs at midnight on the 1st of every month
+  workflow_dispatch:     # Allows manual triggering
+
+permissions:
+  contents: write
+  
+jobs:
+  update-scholar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      # Setup Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      # Install dependencies from requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      # Run the Python script with environment variables
+      - name: Run Scholar Scraper
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          GOOGLE_SCHOLAR_ID: ${{ vars.GOOGLE_SCHOLAR_ID }}
+        run: python scraper.py
+      
+      # Create empty file if doesn't exist (should never happen with the updated script)
+      - name: Ensure JSON file exists
+        run: |
+          if [ ! -f "data/scholar.json" ]; then
+            mkdir -p data
+            echo "[]" > data/scholar.json
+          fi
+      
+      - name: Track file changes
+        run: git add data/scholar.json
+      
+      - name: Check if file changed
+        id: changed
+        continue-on-error: true
+        run: git diff --exit-code data/scholar.json
+      
+      - name: Check if staged file changed
+        id: cached
+        continue-on-error: true
+        run: git diff --exit-code --cached data/scholar.json
+      
+      - name: Commit and push if changed
+        if: ${{ steps.changed.outcome == 'failure' || steps.cached.outcome == 'failure' }}
+        run: |
+          git config --global user.name '${{ vars.GIT_USERNAME || 'GitHub Action' }}'
+          git config --global user.email '${{ vars.GIT_EMAIL || 'action@github.com' }}'
+          git commit -am "Update Google Scholar records [skip ci]"
+          git push 
