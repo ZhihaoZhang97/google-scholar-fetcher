@@ -11,6 +11,7 @@ permissions:
 jobs:
   update-scholar:
     runs-on: ubuntu-latest
+    environment: Google Scholar  # This tells the workflow to use the environment
     steps:
       - uses: actions/checkout@v4
       
