@@ -26,12 +26,32 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
-      # Run the Python script with environment variables
+      # Create log directory
+      - name: Create log directory
+        run: mkdir -p ${{ runner.temp }}/scholar_logs
+      
+      # Run the Python script with environment variables and log output
       - name: Run Scholar Scraper
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           GOOGLE_SCHOLAR_ID: ${{ vars.GOOGLE_SCHOLAR_ID }}
-        run: python scraper.py
+        run: |
+          python scraper.py > ${{ runner.temp }}/scholar_logs/scraper.log 2>&1 || touch ${{ runner.temp }}/scholar_logs/error.flag
+          if [ -f "${{ runner.temp }}/scholar_logs/error.flag" ]; then
+            cat ${{ runner.temp }}/scholar_logs/scraper.log
+            echo "::error::Scholar scraper failed. See logs for details."
+            exit 1
+          else
+            cat ${{ runner.temp }}/scholar_logs/scraper.log
+          fi
+      
+      # Upload logs in case of failure
+      - name: Upload logs on failure
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Scholar Scraper Logs
+          path: ${{ runner.temp }}/scholar_logs
       
       # Create empty file if doesn't exist (should never happen with the updated script)
       - name: Ensure JSON file exists
