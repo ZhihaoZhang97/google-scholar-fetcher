@@ -14,11 +14,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      # Debug: Check what variables are available (values will be masked in logs)
+      - name: Debug variables
+        run: |
+          echo "GOOGLE_SCHOLAR_ID is set: ${{ vars.GOOGLE_SCHOLAR_ID != '' }}"
+          echo "RECORD_FILE is set: ${{ vars.RECORD_FILE != '' }}"
+      
+      # Ensure target directory exists
+      - name: Create directory for record file if needed
+        run: |
+          mkdir -p $(dirname "${{ vars.RECORD_FILE }}")
+      
+      # Use the local version of the action rather than the external one
       - name: Fetch Google Scholar Records
-        uses: sxlllslgh/google-scholar-fetcher@v1
-        with:
-          google-scholar-id: ${{ vars.GOOGLE_SCHOLAR_ID }}
-          record-file: ${{ vars.RECORD_FILE }}
+        id: scholar-fetch
+        run: |
+          node index.js
+        env:
+          INPUT_GOOGLE-SCHOLAR-ID: ${{ vars.GOOGLE_SCHOLAR_ID }}
+          INPUT_RECORD-FILE: ${{ vars.RECORD_FILE }}
       
       - name: Track record file changes
         run: git add ${{ vars.RECORD_FILE }}
@@ -36,7 +50,7 @@ jobs:
       - name: Commit and push if changed
         if: ${{ steps.changed.outcome == 'failure' || steps.cached.outcome == 'failure' }}
         run: |
-          git config --global user.name '${{ vars.GIT_USERNAME }}'
-          git config --global user.email '${{ vars.GIT_EMAIL }}'
+          git config --global user.name '${{ vars.GIT_USERNAME || 'GitHub Action' }}'
+          git config --global user.email '${{ vars.GIT_EMAIL || 'action@github.com' }}'
           git commit -am "Update Google Scholar records"
           git push 
