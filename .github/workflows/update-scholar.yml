@@ -1,0 +1,42 @@
+name: Update Google Scholar Records
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"  # Runs at midnight on the 1st of every month
+  workflow_dispatch:     # Allows manual triggering
+
+permissions:
+  contents: write
+  
+jobs:
+  update-scholar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Fetch Google Scholar Records
+        uses: sxlllslgh/google-scholar-fetcher@v1
+        with:
+          google-scholar-id: ${{ vars.GOOGLE_SCHOLAR_ID }}
+          record-file: ${{ vars.RECORD_FILE }}
+      
+      - name: Track record file changes
+        run: git add ${{ vars.RECORD_FILE }}
+
+      - name: Check if file changed
+        id: changed
+        continue-on-error: true
+        run: git diff --exit-code ${{ vars.RECORD_FILE }}
+
+      - name: Check if staged file changed
+        id: cached
+        continue-on-error: true
+        run: git diff --exit-code --cached ${{ vars.RECORD_FILE }}
+
+      - name: Commit and push if changed
+        if: ${{ steps.changed.outcome == 'failure' || steps.cached.outcome == 'failure' }}
+        run: |
+          git config --global user.name '${{ vars.GIT_USERNAME }}'
+          git config --global user.email '${{ vars.GIT_EMAIL }}'
+          git commit -am "Update Google Scholar records"
+          git push 
