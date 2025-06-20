@@ -1,220 +1,8 @@
 [
   {
-    "title": "Flick: Few Labels Text Classification using K-Aware Intermediate Learning in Multi-Task Low-Resource Languages",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:dBIO0h50nwkC",
-    "authors": [
-      "A Almutairi",
-      " A Alsuhaibani",
-      " S Jameel",
-      " U Naseem",
-      " G Mohammadi",
-      " ..."
-    ],
-    "journal": "arXiv preprint arXiv:2506.10292, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "A Multimodal Prompt-based Framework for Analyzing Code-Mixed and Low-Resource Memes",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:QYdC8u9Cj1oC",
-    "authors": [
-      "S Thapa",
-      " H Veeramani",
-      " L Hu",
-      " Q Zhang",
-      " W Wang",
-      " U Naseem"
-    ],
-    "journal": "Proceedings of the International AAAI Conference on Web and Social Media 19 \u2026, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "Should LLM Safety Be More Than Refusing Harmful Instructions?",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:mlAyqtXpCwEC",
-    "authors": [
-      "U Maskey",
-      " M Dras",
-      " U Naseem"
-    ],
-    "journal": "arXiv preprint arXiv:2506.02442, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "TurnBench-MS: A Benchmark for Evaluating Multi-Turn, Multi-Step Reasoning in Large Language Models",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:IUKN3-7HHlwC",
-    "authors": [
-      "Y Zhang",
-      " M Wang",
-      " X Li",
-      " K Ren",
-      " C Zhu",
-      " U Naseem"
-    ],
-    "journal": "arXiv preprint arXiv:2506.01341, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "UICD: A new dataset and approach for urdu image captioning",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:WJVC3Jt7v1AC",
-    "authors": [
-      "R Muzaffar",
-      " SY Arafat",
-      " J Rashid",
-      " J Kim",
-      " U Naseem"
-    ],
-    "journal": "PLoS One 20 (6), e0320701, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "XGUARD: A Graded Benchmark for Evaluating Safety Failures of Large Language Models on Extremist Content",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:OTTXONDVkokC",
-    "authors": [
-      "V Abishethvarman",
-      " B Chandna",
-      " P Jalan",
-      " U Naseem"
-    ],
-    "journal": "arXiv preprint arXiv:2506.00973, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "Multimodal Generative AI with Autoregressive LLMs for Human Motion Understanding and Generation: A Way Forward",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:9c2xU6iGI7YC",
-    "authors": [
-      "M Islam",
-      " T Huang",
-      " E Ahn",
-      " U Naseem"
-    ],
-    "journal": "arXiv preprint arXiv:2506.03191, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "Benchmarking large language models for cryptanalysis and mismatched-generalization",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:2VqYfGB8ITEC",
-    "authors": [
-      "U Maskey",
-      " C Zhu",
-      " U Naseem"
-    ],
-    "journal": "arXiv preprint arXiv:2505.24621, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": 1
-  },
-  {
-    "title": "Probing Politico-Economic Bias in Multilingual Large Language Models: A Cultural Analysis of Low-Resource Pakistani Languages",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:IRz6iEL74y4C",
-    "authors": [
-      "A Nadeem",
-      " M Dras",
-      " U Naseem"
-    ],
-    "journal": "arXiv preprint arXiv:2506.00068, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "Seeing the Threat: Vulnerabilities in Vision-Language Models to Adversarial Attack",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:_5tno0g5mFcC",
-    "authors": [
-      "J Ren",
-      " M Dras",
-      " U Naseem"
-    ],
-    "journal": "arXiv preprint arXiv:2505.21967, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "Modeling and Optimizing User Preferences in AI Copilots: A Comprehensive Survey and Taxonomy",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:6ZxmRoH8BuwC",
-    "authors": [
-      "S Afzoon",
-      " Z Jahanandish",
-      " PT Huynh",
-      " A Beheshti",
-      " U Naseem"
-    ],
-    "journal": "arXiv preprint arXiv:2505.21907, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "POLAR: A Benchmark for Multilingual, Multicultural, and Multi-Event Online Polarization",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:sNmaIFBj_lkC",
-    "authors": [
-      "U Naseem",
-      " J Ren",
-      " S Anwar",
-      " S Kohail",
-      " RAG Veliz",
-      " R Geislinger",
-      " A Jabr",
-      " ..."
-    ],
-    "journal": "arXiv preprint arXiv:2505.20624, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
     "title": "From Generation to Detection: A Multimodal Multi-Task Dataset for Benchmarking Health Misinformation",
     "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:DUooU5lO8OsC",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zARYG3MAAAAJ&sortby=pubdate&citation_for_view=zARYG3MAAAAJ:zYLM7Y9cAGgC",
     "authors": [
       "Z Zhang",
       " Y Zhang",
@@ -232,127 +20,74 @@
     "citations": null
   },
   {
-    "title": "MRGAgents: A Multi-Agent Framework for Improved Medical Report Generation with Med-LVLMs",
+    "title": "RU-AI: A Large Multimodal Dataset for Machine-Generated Content Detection",
     "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:umqufdRvDiIC",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zARYG3MAAAAJ&sortby=pubdate&citation_for_view=zARYG3MAAAAJ:UeHWp8X0CEIC",
     "authors": [
-      "P Wang",
-      " S Ye",
-      " U Naseem",
-      " J Kim"
+      "L Huang",
+      " Z Zhang",
+      " Y Zhang",
+      " X Zhou",
+      " S Wang"
     ],
-    "journal": "arXiv preprint arXiv:2505.18530, 2025",
+    "journal": "Companion Proceedings of the ACM on Web Conference 2025, 733-736, 2025",
     "volume": "",
     "pages": "",
     "publisher": "",
     "description": "",
-    "citations": null
+    "citations": 5
   },
   {
-    "title": "Can Pruning Improve Reasoning? Revisiting Long-CoT Compression with Capability in Mind for Better Reasoning",
+    "title": "BeefBot: Harnessing Advanced LLM and RAG Techniques for Providing Scientific and Technology Solutions to Beef Producers",
     "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:GtLg2Ama23sC",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zARYG3MAAAAJ&sortby=pubdate&citation_for_view=zARYG3MAAAAJ:IjCSPb-OGe4C",
     "authors": [
-      "S Zhao",
-      " J Yuan",
-      " G Yang",
+      "Z Zhang",
+      " CA Wilson",
+      " R Hay",
+      " Y Everingham",
       " U Naseem"
     ],
-    "journal": "arXiv preprint arXiv:2505.14582, 2025",
+    "journal": "Proceedings of the 31st International Conference on Computational \u2026, 2025",
     "volume": "",
     "pages": "",
     "publisher": "",
     "description": "",
-    "citations": 1
+    "citations": 2
   },
   {
-    "title": "Beyond Retrieval: Joint Supervision and Multimodal Document Ranking for Textbook Question Answering",
+    "title": "Game-MUG: Multimodal oriented game situation understanding and commentary generation dataset",
     "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:_FM0Bhl9EiAC",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zARYG3MAAAAJ&sortby=pubdate&citation_for_view=zARYG3MAAAAJ:9yKSN-GCB0IC",
     "authors": [
-      "H Alawwad",
-      " U Naseem",
-      " A Alhothali",
-      " A Alkhathlan",
-      " A Jamal"
+      "Z Zhang",
+      " F Cao",
+      " Y Mo",
+      " Y Zhang",
+      " J Poon",
+      " C Han"
     ],
-    "journal": "arXiv preprint arXiv:2505.13520, 2025",
+    "journal": "arXiv preprint arXiv:2404.19175, 2024",
     "volume": "",
     "pages": "",
     "publisher": "",
     "description": "",
-    "citations": null
+    "citations": 4
   },
   {
-    "title": "Entity-Aware Optimal Transport and Residual Attention for Multimodal Content Moderation",
+    "title": "PiggyBack: Pretrained Visual Question Answering Environment for Backing up Non-deep Learning Professionals",
     "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:XvxMoLDsR5gC",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zARYG3MAAAAJ&sortby=pubdate&citation_for_view=zARYG3MAAAAJ:u5HHmVD_uO8C",
     "authors": [
-      "SB Shah",
-      " S Shiwakoti",
-      " T Bhuiyan",
-      " MA Moni",
-      " S Thapa",
-      " U Naseem"
+      "Z Zhang",
+      " S Luo",
+      " J Chen",
+      " S Lai",
+      " S Long",
+      " H Chung",
+      " SC Han"
     ],
-    "journal": "Companion Proceedings of the ACM on Web Conference 2025, 2306-2313, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "PoliMeme: Exploring Offensive Meme Propagation in the Israel-Palestine Conflict",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:4hFrxpcac9AC",
-    "authors": [
-      "P Grover",
-      " V Gohil",
-      " B Goel",
-      " H Veeramani",
-      " SB Shah",
-      " SR Jain",
-      " S Thapa",
-      " ..."
-    ],
-    "journal": "Companion Proceedings of the ACM on Web Conference 2025, 1969-1978, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "Third International Workshop on Multimodal Content Analysis for Social Good",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:a9-T7VOCCH8C",
-    "authors": [
-      "U Naseem",
-      " S Thapa",
-      " RKW Lee",
-      " M Nasim"
-    ],
-    "journal": "Companion Proceedings of the ACM on Web Conference 2025, 1961-1962, 2025",
-    "volume": "",
-    "pages": "",
-    "publisher": "",
-    "description": "",
-    "citations": null
-  },
-  {
-    "title": "BEAST: Leveraging Contrastive Learning and Unsupervised Sentence Embeddings for Improved Drug Abuse Detection",
-    "date": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=61Ou1P8AAAAJ&sortby=pubdate&citation_for_view=61Ou1P8AAAAJ:HtEfBTGE9r8C",
-    "authors": [
-      "S Shiwakoti",
-      " SB Shah",
-      " W Wang",
-      " S Thapa",
-      " I Razzak",
-      " U Naseem"
-    ],
-    "journal": "Companion Proceedings of the ACM on Web Conference 2025, 1938-1945, 2025",
+    "journal": "Proceedings of the Sixteenth ACM International Conference on Web Search and \u2026, 2023",
     "volume": "",
     "pages": "",
     "publisher": "",
